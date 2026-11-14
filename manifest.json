@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "rainlog",
+  "name": "Rain Log",
+  "version": "1.0.0",
+  "author": "Captain Reginald",
+  "license": "MIT",
+  "description": "Log daily rainfall from the rain gauge in your yard and view rolling totals in the Omarchy Bar",
+  "homepage": "https://github.com/captain-reginald/omarchy-rain-log",
+  "repository": "https://github.com/captain-reginald/omarchy-rain-log",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Rain Log",
+    "description": "Log daily rainfall from the rain gauge in your yard and view rolling totals in the Omarchy Bar",
+    "category": "Info",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
