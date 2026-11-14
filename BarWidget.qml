@@ -4,7 +4,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "rainlog"
+  moduleName: "io.github.captain-reginald.rainlog"
 
   function injectPanel() {
     var target = panelLoader.item

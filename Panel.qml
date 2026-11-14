@@ -10,8 +10,8 @@ import "Model.js" as Model
 
 Panel {
   id: root
-  moduleName: "rainlog"
-  ipcTarget: "rainlog"
+  moduleName: "io.github.captain-reginald.rainlog"
+  ipcTarget: "io.github.captain-reginald.rainlog"
   manageIpc: true
 
   property var anchorItem: null

@@ -71,19 +71,19 @@ To install without enabling it immediately:
 
 ```bash
 omarchy plugin add https://github.com/captain-reginald/omarchy-rain-log
-omarchy plugin enable rainlog
+omarchy plugin enable io.github.captain-reginald.rainlog
 ```
 
 ### Update
 
 ```bash
-omarchy plugin update rainlog
+omarchy plugin update io.github.captain-reginald.rainlog
 ```
 
 ### Remove
 
 ```bash
-omarchy plugin remove rainlog
+omarchy plugin remove io.github.captain-reginald.rainlog
 ```
 
 Removing the plugin leaves the data file in place. Delete `~/Documents/rainlog.json` yourself if you also want to remove the rainfall history.
@@ -125,4 +125,8 @@ Each value is in tenths of an inch, so `23` means 2.3 inches. The file is writte
 
 ## License
 
-MIT © 2026 Rain Log contributors. See [LICENSE](LICENSE).
+Rain Log is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+It is distributed in the hope that it will be useful, but **without any warranty**; without even the implied warranty of merchantability or fitness for a particular purpose. See [LICENSE](LICENSE) for the full text.
+
+Copyright © 2026 Captain Reginald.
