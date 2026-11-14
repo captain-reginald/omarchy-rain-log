@@ -1,8 +1,8 @@
 # Rain Log
 
-Are you a gardener who wants a better way to keep track of hyper-local rainfall totals from the gauge in your yard?
+Do you want a better way to keep track of hyper-local rainfall totals from the rain gauge in your garden?
 
-Rain Log is a small Omarchy shell plugin that turns your daily gauge reading into a rolling record you can actually use: today, the last three days, the last week, this month, this season, or any custom window you choose. It keeps a calendar history, shows your most recent rainy days at a glance, and can put the total next to a raindrop in the bar.
+Rain Log is a small Omarchy shell plugin that turns your daily gauge reading into a rolling record you can actually use. It allows you to view totals from any custom window you choose: daily, monthly, seasonally, whatever! It does this by keeping a calendar history, shows your most recent rainy days at a glance, and can even put the category total of your choosing in the waybar.
 
 ![Rain Log main page after entering several days of rainfall](preview.png)
 
@@ -10,15 +10,13 @@ Rain Log is a small Omarchy shell plugin that turns your daily gauge reading int
 
 ## Ways Rain Log helps in the garden
 
-- **Measure your garden, not the airport.** Record the number from the gauge in your yard instead of relying on a weather app reporting for a station miles away.
-- **Know whether the soil got a real soak.** The 24-hour, 72-hour, and 7-day totals separate a passing sprinkle from rain that actually reached the roots.
+- **Measure from your garden, not the airport.** Record the number from the gauge in your yard instead of relying on a weather app reporting for a station miles away.
+- **Own your data.** Everything lives in a small, portable, local JSON file. There is no account, no cloud, and no network access.
 - **Watch the month and the season.** Monthly and seasonal totals show whether you are ahead of or behind your usual pattern.
-- **Track a specific window.** The custom range (14 days by default) is handy for seed starting, transplanting, or following a dry spell.
+- **Track a specific window.** The custom range (14 days by default) is handy for adding together rain from any time frame you want to keep track of.
 - **Scrolling history.** Use the ◀ / ▶ arrows to step any period backwards and compare this week with last week, or this month with last month.
 - **Catch up on missed readings.** The calendar keeps one value per day, so you can fill in a missed day or correct a typo without disturbing the rest of the record.
 - **See the recent rainy days.** The last five days with rain stay visible with their totals, even when they cross a week or month boundary.
-- **Put it on the bar if you want it.** Show a raindrop plus a daily, weekly, monthly, seasonal, or yearly total in the Omarchy bar. The count is hidden by default, leaving just the raindrop.
-- **Own the data.** Everything lives in a small local JSON file. There is no account, no cloud, and no network access.
 - **Match your desktop.** Colors, fonts, spacing, controls, and the popup chrome all follow the active Omarchy theme.
 
 ## Calendar and edit history
