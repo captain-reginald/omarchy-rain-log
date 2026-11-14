@@ -23,7 +23,7 @@ Rain Log is a small Omarchy shell plugin that turns your daily gauge reading int
 
 ![Rain Log calendar page showing daily totals for November](screenshots/calendar.png)
 
-Click **Edit History** to open the current month. Every cell shows the day number and that day's total in inches, or `-` when nothing was recorded. The selected day is highlighted.
+Click **Edit History** to open the current month. Every cell shows the date and that day's total in inches. The selected day is highlighted.
 
 - Use the ◀ / ▶ arrows to move between months.
 - Click any day, then type its reading in the field below the calendar and press Enter.
@@ -37,7 +37,7 @@ Click **Edit History** to open the current month. Every cell shows the day numbe
 The settings page keeps the data file path and controls the optional bar readout:
 
 - **Data file path** — where the JSON history is stored.
-- **Show rain count** — off by default. When off, the bar shows only the raindrop.
+- **Show rain count** — off by default for the bar. When off, the bar shows only the raindrop.
 - **Count total** — when the count is visible, choose **Daily**, **Weekly**, **Monthly**, **Seasonal**, or **Yearly**.
 
 The bar value always reflects the current period, even if you scroll the popup back through older totals.
