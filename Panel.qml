@@ -29,7 +29,13 @@ Panel {
     return value === undefined || value === null ? fallback : value
   }
 
-  readonly property string dataPath: String(root.setting("dataPath", Quickshell.env("HOME") + "/Documents/rainlog.json"))
+  readonly property string dataPath: String(root.setting("dataPath", Quickshell.env("HOME") + "/Documents/rainlog/rainlog.json"))
+  readonly property string dataDir: {
+    var path = root.dataPath
+    var slash = path.lastIndexOf("/")
+    return slash > 0 ? path.substring(0, slash) : "/"
+  }
+  property bool dataDirReady: false
   readonly property int customDays: {
     var v = parseInt(root.setting("customDays", 14), 10)
     return isNaN(v) || v < 1 ? 14 : v
@@ -43,10 +49,36 @@ Panel {
     onFileChanged: reload()
     onLoaded: root.loadText(text())
     onLoadFailed: {
+      // The folder is created asynchronously below; do not create an empty
+      // store before it exists.
+      if (!root.dataDirReady) return
       root.entries = ({})
       Qt.callLater(function() { root.save() })
     }
   }
+
+  // Rain data lives in its own folder by default so the whole store can be
+  // synced as a unit. Create the parent folder before the first read or write.
+  Process {
+    id: dataDirProc
+    command: ["mkdir", "-p", root.dataDir]
+    onExited: function(exitCode) {
+      if (exitCode !== 0) {
+        console.warn("rainlog: could not create data directory", root.dataDir)
+        return
+      }
+      root.dataDirReady = true
+      dataFile.reload()
+    }
+  }
+
+  function prepareDataDir() {
+    root.dataDirReady = false
+    if (!dataDirProc.running) dataDirProc.running = true
+  }
+
+  Component.onCompleted: root.prepareDataDir()
+  onDataPathChanged: root.prepareDataDir()
 
   function loadText(text) {
     try {

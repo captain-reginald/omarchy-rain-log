@@ -84,11 +84,11 @@ omarchy plugin update io.github.captain-reginald.rainlog
 omarchy plugin remove io.github.captain-reginald.rainlog
 ```
 
-Removing the plugin leaves the data file in place. Delete `~/Documents/rainlog.json` yourself if you also want to remove the rainfall history.
+Removing the plugin leaves the data file in place. Delete `~/Documents/rainlog/` yourself if you also want to remove the rainfall history.
 
 ## Data file
 
-By default the history is stored at `~/Documents/rainlog.json`. The format is deliberately simple:
+By default the history is stored at `~/Documents/rainlog/rainlog.json`. The folder is created automatically, so you can sync the whole `rainlog` directory between machines. The format is deliberately simple:
 
 ```json
 {
